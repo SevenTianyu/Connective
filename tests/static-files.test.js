@@ -69,3 +69,12 @@ test('app.js hardens missing runtime, fallback copy, and copied state', () => {
   assert.match(app, /window\.clearTimeout/);
   assert.match(app, /resetCopiedState/);
 });
+
+test('README documents the static MVP workflow', () => {
+  const readme = read('README.md');
+
+  assert.match(readme, /Connective/);
+  assert.match(readme, /python3 -m http\.server 4173/);
+  assert.match(readme, /node --test tests\/\*\.test\.js/);
+  assert.match(readme, /三张目的卡片/);
+});
