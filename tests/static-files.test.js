@@ -30,6 +30,7 @@ test('index.html loads data before app script', () => {
 });
 
 test('referenced static assets exist', () => {
+  assert.ok(fs.existsSync('data.js'));
   assert.ok(fs.existsSync('styles.css'));
   assert.ok(fs.existsSync('app.js'));
 });
