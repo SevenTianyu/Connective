@@ -34,3 +34,14 @@ test('referenced static assets exist', () => {
   assert.ok(fs.existsSync('styles.css'));
   assert.ok(fs.existsSync('app.js'));
 });
+
+test('styles.css defines Pixel Paper tokens and responsive rules', () => {
+  const css = read('styles.css');
+
+  assert.match(css, /--paper/);
+  assert.match(css, /--ink/);
+  assert.match(css, /--brick/);
+  assert.match(css, /\.purpose-card/);
+  assert.match(css, /\.purpose-card\.is-active/);
+  assert.match(css, /@media \(max-width: 760px\)/);
+});
