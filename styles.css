@@ -172,6 +172,8 @@ h2 {
 }
 
 .purpose-card {
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   padding: 16px;
   text-align: left;
@@ -190,20 +192,23 @@ h2 {
   box-shadow: 6px 6px 0 rgba(201, 94, 59, 0.28);
 }
 
-.purpose-card__number {
+.purpose-card__number,
+.purpose-card > span:first-child {
   display: inline-block;
   margin-bottom: 18px;
   color: var(--brick);
   font-family: var(--mono);
 }
 
-.purpose-card h3 {
+.purpose-card h3,
+.purpose-card > strong {
   margin: 0;
   font-family: var(--serif);
   font-size: 1.45rem;
 }
 
-.purpose-card p {
+.purpose-card p,
+.purpose-card > span:last-child {
   margin: 10px 0 0;
   line-height: 1.5;
 }
