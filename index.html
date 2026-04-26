@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Connective 是田宇的个人连接页，帮助访问者带着更清楚的目的开口。">
+    <title>Connective | Tianyu</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="status-bar" aria-label="Page status">
+        <span>CONNECTIVE / PERSONAL CARD</span>
+        <span class="status-pill">OPEN</span>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">PERSON / WRITING / THINKING</p>
+          <h1 id="hero-title">田宇，不是一个微信二维码</h1>
+          <p class="hero-lede">如果你想认识我、聊一个观点，或者一起做点事，可以先让你的 AI 助手帮你组织第一句话。</p>
+        </div>
+
+        <aside class="profile-card" aria-label="个人状态">
+          <p class="profile-card__status">AVAILABLE FOR REAL CONVERSATION</p>
+          <p>写作 / AI 产品 / 个人连接 / 长期关系 / 真实合作</p>
+        </aside>
+      </section>
+
+      <section class="context-grid" aria-label="个人上下文">
+        <article>
+          <h2>我关心什么</h2>
+          <p>AI 时代的表达、写作、个人连接、Agent、长期关系，以及技术如何帮助人更准确地说出自己的意图。</p>
+        </article>
+        <article>
+          <h2>你可以找我聊什么</h2>
+          <p>一个真实的认识、一篇文章里的判断、一个还没完全成形但值得一起推演的想法。</p>
+        </article>
+        <article>
+          <h2>一些真实痕迹</h2>
+          <p>我长期写关于 AI、产品、组织和个人判断的长文，也关注 Agent、数据、评估和真实产品落地之间的关系。</p>
+        </article>
+      </section>
+
+      <section class="prompt-workbench" aria-labelledby="prompt-title">
+        <div class="section-heading">
+          <p class="eyebrow">CHOOSE YOUR INTENT</p>
+          <h2 id="prompt-title">你想怎样开口？</h2>
+        </div>
+
+        <div class="purpose-list" data-purpose-list>
+          <button class="purpose-card is-active" type="button">
+            <span>01</span>
+            <strong>认识我</strong>
+            <span>写一段自然的破冰开场。</span>
+          </button>
+          <button class="purpose-card" type="button">
+            <span>02</span>
+            <strong>聊一篇文章 / 一个观点</strong>
+            <span>围绕写作和思考发起对话。</span>
+          </button>
+          <button class="purpose-card" type="button">
+            <span>03</span>
+            <strong>一起做点事</strong>
+            <span>合作、访谈、项目、机会。</span>
+          </button>
+        </div>
+
+        <section class="prompt-panel" aria-label="Prompt 预览">
+          <div class="prompt-panel__header">
+            <span data-active-purpose-label>认识我</span>
+            <button type="button" data-copy-button>复制 Prompt</button>
+          </div>
+          <pre data-prompt-preview tabindex="0"></pre>
+          <p class="copy-feedback" data-copy-feedback role="status" aria-live="polite"></p>
+        </section>
+      </section>
+
+      <footer class="contact-block" aria-label="联系方式">
+        <p class="eyebrow">CONTACT</p>
+        <p>先复制 Prompt，让你的 AI 助手帮你整理第一句话。然后通过你已有的渠道联系我。</p>
+        <div class="contact-links">
+          <span>WeChat</span>
+          <a href="https://github.com/SevenTianyu">GitHub</a>
+          <span>Writing</span>
+        </div>
+      </footer>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
