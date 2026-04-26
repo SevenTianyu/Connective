@@ -28,3 +28,8 @@ test('index.html loads data before app script', () => {
   assert.ok(appIndex > -1);
   assert.ok(dataIndex < appIndex);
 });
+
+test('referenced static assets exist', () => {
+  assert.ok(fs.existsSync('styles.css'));
+  assert.ok(fs.existsSync('app.js'));
+});
