@@ -51,8 +51,8 @@
       button.setAttribute('aria-pressed', String(purpose.id === activePurposeId));
       button.innerHTML = `
         <span class="purpose-card__number">${purpose.number}</span>
-        <h3>${purpose.label}</h3>
-        <p>${purpose.shortDescription}</p>
+        <strong>${purpose.label}</strong>
+        <span>${purpose.shortDescription}</span>
       `;
       button.addEventListener('click', () => {
         activePurposeId = purpose.id;

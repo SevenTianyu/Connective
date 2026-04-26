@@ -19,6 +19,15 @@ test('index.html contains the approved page structure', () => {
   assert.match(html, /一起做点事/);
 });
 
+test('index.html footer exposes all required contact labels', () => {
+  const html = read('index.html');
+
+  assert.match(html, />WeChat</);
+  assert.match(html, />Email</);
+  assert.match(html, />GitHub</);
+  assert.match(html, />Writing</);
+});
+
 test('index.html loads data before app script', () => {
   const html = read('index.html');
   const dataIndex = html.indexOf('data.js');
@@ -61,6 +70,15 @@ test('app.js wires purpose rendering, prompt preview, and copy behavior', () => 
   assert.match(app, /copyActivePrompt/);
   assert.match(app, /navigator\.clipboard\.writeText/);
   assert.match(app, /document\.execCommand\('copy'\)/);
+});
+
+test('app.js renders purpose cards with phrasing content inside buttons', () => {
+  const app = read('app.js');
+
+  assert.match(app, /<strong>\$\{purpose\.label\}<\/strong>/);
+  assert.match(app, /<span>\$\{purpose\.shortDescription\}<\/span>/);
+  assert.doesNotMatch(app, /<h3>/);
+  assert.doesNotMatch(app, /<p>/);
 });
 
 test('app.js hardens missing runtime, fallback copy, and copied state', () => {
