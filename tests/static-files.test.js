@@ -56,3 +56,16 @@ test('app.js wires purpose rendering, prompt preview, and copy behavior', () => 
   assert.match(app, /navigator\.clipboard\.writeText/);
   assert.match(app, /document\.execCommand\('copy'\)/);
 });
+
+test('app.js hardens missing runtime, fallback copy, and copied state', () => {
+  const app = read('app.js');
+
+  assert.match(app, /if \(!data\)/);
+  assert.match(app, /requiredNodes/);
+  assert.match(app, /requiredNodes\.some/);
+  assert.match(app, /finally/);
+  assert.match(app, /throw new Error\('Fallback copy failed'\)/);
+  assert.match(app, /copyResetTimeout/);
+  assert.match(app, /window\.clearTimeout/);
+  assert.match(app, /resetCopiedState/);
+});
