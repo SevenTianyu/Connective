@@ -29,6 +29,12 @@ test('index.html loads data before app script', () => {
   assert.ok(dataIndex < appIndex);
 });
 
+test('index.html declares an inline SVG favicon', () => {
+  const html = read('index.html');
+
+  assert.match(html, /<link rel="icon" type="image\/svg\+xml" href="data:image\/svg\+xml,/);
+});
+
 test('referenced static assets exist', () => {
   assert.ok(fs.existsSync('data.js'));
   assert.ok(fs.existsSync('styles.css'));
