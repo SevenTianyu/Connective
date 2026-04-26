@@ -45,3 +45,14 @@ test('styles.css defines Pixel Paper tokens and responsive rules', () => {
   assert.match(css, /\.purpose-card\.is-active/);
   assert.match(css, /@media \(max-width: 760px\)/);
 });
+
+test('app.js wires purpose rendering, prompt preview, and copy behavior', () => {
+  const app = read('app.js');
+
+  assert.match(app, /ConnectiveData/);
+  assert.match(app, /renderPurposeCards/);
+  assert.match(app, /updatePromptPreview/);
+  assert.match(app, /copyActivePrompt/);
+  assert.match(app, /navigator\.clipboard\.writeText/);
+  assert.match(app, /document\.execCommand\('copy'\)/);
+});
