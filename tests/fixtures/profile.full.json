@@ -1,0 +1,281 @@
+{
+  "defaultPurposeId": "meet",
+  "defaultLanguage": "zh",
+  "deploymentTarget": "GitHub Pages",
+  "languages": {
+    "zh": {
+      "code": "zh",
+      "htmlLang": "zh-CN",
+      "person": {
+        "name": "林微",
+        "fullName": "林微 / Lin Wei"
+      },
+      "title": "Connective | 林微",
+      "metaDescription": "林微的 Connective 主页帮助访问者复制 Prompt，并写出更清楚的第一句话。",
+      "switchLabel": "EN",
+      "switchAriaLabel": "Switch to English",
+      "status": {
+        "title": "CONNECTIVE / PERSONAL CARD"
+      },
+      "hero": {
+        "eyebrow": "PROMPT / INTENT / CONNECTION",
+        "title": "把陌生开场变成真实连接",
+        "lede": "选择一个联系目的，复制一段林微的上下文 Prompt，让你的 AI 助手帮你写出第一句话。"
+      },
+      "profile": {
+        "ariaLabel": "个人状态",
+        "status": "关心的内容",
+        "interestAriaLabel": "林微关心的内容",
+        "interests": [
+          { "text": "城市里的真实连接", "slot": "primary" },
+          { "text": "写作", "slot": "writing" },
+          { "text": "公共空间", "slot": "connection" },
+          { "text": "Agent", "slot": "agent" },
+          { "text": "长期关系", "slot": "longterm" },
+          { "text": "社区协作", "slot": "collaboration" },
+          { "text": "城市研究", "slot": "product" },
+          { "text": "意图表达", "slot": "intent" },
+          { "text": "组织观察", "slot": "organization" }
+        ]
+      },
+      "contextAriaLabel": "个人上下文",
+      "contextCards": [
+        {
+          "title": "林微关心什么",
+          "body": "城市研究、公共空间、社区协作，以及技术如何帮助人把真实意图说清楚。"
+        },
+        {
+          "title": "你可以找她聊什么",
+          "body": "城市里的真实连接、一篇文章里的判断，或一个还没有完全成形的公共项目。"
+        },
+        {
+          "title": "一些公开痕迹",
+          "body": "林微写关于城市研究、社区协作和长期关系的文章，也关注 AI 如何帮助人更准确地表达。"
+        }
+      ],
+      "workbench": {
+        "eyebrow": "CHOOSE YOUR INTENT",
+        "title": "你想怎样开口？",
+        "previewLabel": "Prompt 预览"
+      },
+      "dialog": {
+        "closeLabel": "关闭 Prompt 窗口",
+        "eyebrow": "HAND OFF PROMPT",
+        "title": "把 Prompt 交给你的 AI 助手",
+        "description": "点一个平台，会先复制 Prompt，再打开对应助手。也可以只复制。",
+        "purposePrefix": "当前目的：",
+        "platformLabel": "大语言模型平台",
+        "manualCopyLabel": "Prompt 手动复制文本"
+      },
+      "contact": {
+        "ariaLabel": "联系方式",
+        "eyebrow": "CONTACT",
+        "body": "先复制 Prompt，让你的 AI 助手帮你整理第一句话。然后通过你已有的渠道联系林微。",
+        "links": {
+          "wechat": "WeChat",
+          "email": "lin@example.com",
+          "github": "lin-wei-lab",
+          "writing": "Writing"
+        }
+      },
+      "ui": {
+        "openPromptButton": "打开 Prompt",
+        "copyOnlyButton": "只复制 Prompt",
+        "copiedButton": "已复制",
+        "copyAndOpenLabel": "复制并打开",
+        "modelAriaLabel": "打开 {{modelName}}",
+        "copiedOpening": "Prompt 已复制，正在打开 {{modelName}}。",
+        "copiedManualOpen": "Prompt 已复制。请再次点击 {{modelName}} 打开。",
+        "copyBlockedOpen": "浏览器不允许自动复制，Prompt 已选中。请按 Command+C / Ctrl+C 复制，再打开 {{modelName}}。",
+        "copiedPrompt": "Prompt 已复制。现在可以粘贴到你选择的大模型里。",
+        "copyBlockedOnly": "浏览器不允许自动复制，Prompt 已选中。请按 Command+C / Ctrl+C 复制。"
+      },
+      "prompt": {
+        "assistantRole": "你是我的私人沟通助手。",
+        "contextIntro": "我准备联系{{personName}}。下面是{{personName}}本人提供的个人上下文。",
+        "intentLabel": "我的联系目的：",
+        "generationIntro": "请基于这个目的和下面的个人上下文，帮我生成：",
+        "tasks": [
+          "一段自然、不油腻的第一句话",
+          "一句我可以用来介绍自己的话",
+          "一个明确但不冒犯的联系意图",
+          "三个语气版本：轻松、真诚、直接"
+        ],
+        "requirementsLabel": "要求：",
+        "requirements": [
+          "不要假装我已经和{{personName}}很熟",
+          "不要写商业套话",
+          "不要过度夸张或过度热情",
+          "不要替我编造经历",
+          "如果我的目的还不清楚，先向我追问 2-3 个问题",
+          "输出要适合发在微信、邮件或私信里"
+        ],
+        "contextLabel": "{{personName}}的个人上下文："
+      },
+      "profileContext": "# 林微 / Lin Wei\n\n## 一句话定位\n林微，一个长期写城市研究、公共空间和真实连接的人。\n\n## 她关心什么\n- 城市研究如何落到人的具体生活里。\n- 公共空间如何帮助陌生人建立真实连接。\n- AI 如何帮助人把合作意图表达得更清楚。\n- 长期关系、社区协作和可以沉淀的对话。\n\n## 联系方式\n- Email：lin@example.com\n- GitHub：lin-wei-lab\n- Writing：城市研究和公共空间笔记。",
+      "purposes": {
+        "meet": {
+          "id": "meet",
+          "number": "01",
+          "label": "认识我",
+          "shortDescription": "写一段自然的破冰开场。",
+          "purposeText": "认识我",
+          "addition": "这个场景偏向自然破冰。请让开场白像一个真实的人想认识另一个真实的人，而不是社交模板。"
+        },
+        "thought": {
+          "id": "thought",
+          "number": "02",
+          "label": "聊一篇文章 / 一个观点",
+          "shortDescription": "围绕写作和思考发起对话。",
+          "purposeText": "聊一篇文章 / 一个观点",
+          "addition": "这个场景偏向围绕一篇文章、一个观点或一次表达继续交流。请先提醒我补充：我读到的内容是什么、哪个观点触发了我、我想继续讨论什么。"
+        },
+        "create": {
+          "id": "create",
+          "number": "03",
+          "label": "一起做点事",
+          "shortDescription": "合作、访谈、项目、机会。",
+          "purposeText": "一起做点事",
+          "addition": "这个场景偏向合作、访谈、项目或机会。请先帮助我说清楚：我想做什么、我能提供什么、我希望林微怎么回应。"
+        }
+      }
+    },
+    "en": {
+      "code": "en",
+      "htmlLang": "en",
+      "person": {
+        "name": "Lin Wei",
+        "fullName": "Lin Wei / 林微"
+      },
+      "title": "Connective | Lin Wei",
+      "metaDescription": "Lin Wei's Connective page helps visitors copy a context prompt and write a clearer first message.",
+      "switchLabel": "中文",
+      "switchAriaLabel": "切换到中文",
+      "status": {
+        "title": "CONNECTIVE / PERSONAL CARD"
+      },
+      "hero": {
+        "eyebrow": "PROMPT / INTENT / CONNECTION",
+        "title": "Turn a cold opening into a real connection",
+        "lede": "Choose why you want to reach out, copy Lin Wei's context prompt, and let your AI assistant shape the opening line."
+      },
+      "profile": {
+        "ariaLabel": "Profile status",
+        "status": "WHAT LIN CARES ABOUT",
+        "interestAriaLabel": "What Lin Wei cares about",
+        "interests": [
+          { "text": "REAL URBAN CONNECTION", "slot": "primary" },
+          { "text": "WRITING", "slot": "writing" },
+          { "text": "PUBLIC SPACE", "slot": "connection" },
+          { "text": "AGENTS", "slot": "agent" },
+          { "text": "LONG-TERM RELATIONSHIPS", "slot": "longterm" },
+          { "text": "COMMUNITY WORK", "slot": "collaboration" },
+          { "text": "URBAN SYSTEMS", "slot": "product" },
+          { "text": "INTENT", "slot": "intent" },
+          { "text": "ORGANIZATION", "slot": "organization" }
+        ]
+      },
+      "contextAriaLabel": "Personal context",
+      "contextCards": [
+        {
+          "title": "What Lin cares about",
+          "body": "Urban systems, public space, community collaboration, and tools that help people state intent more clearly."
+        },
+        {
+          "title": "What to ask her about",
+          "body": "Real connection in cities, a judgment from an essay, or an unfinished public project idea."
+        },
+        {
+          "title": "Public traces",
+          "body": "Lin writes about urban systems, community work, long-term relationships, and how AI can support clearer expression."
+        }
+      ],
+      "workbench": {
+        "eyebrow": "CHOOSE YOUR INTENT",
+        "title": "How do you want to begin?",
+        "previewLabel": "Prompt preview"
+      },
+      "dialog": {
+        "closeLabel": "Close prompt window",
+        "eyebrow": "HAND OFF PROMPT",
+        "title": "Give the prompt to your AI assistant",
+        "description": "Pick a platform to copy the prompt first, then open the assistant. You can also copy only.",
+        "purposePrefix": "Current intent: ",
+        "platformLabel": "Large language model platforms",
+        "manualCopyLabel": "Prompt text for manual copy"
+      },
+      "contact": {
+        "ariaLabel": "Contact",
+        "eyebrow": "CONTACT",
+        "body": "Copy the prompt first, let your AI assistant organize the first message, then contact Lin through a channel you already have.",
+        "links": {
+          "wechat": "WeChat",
+          "email": "lin@example.com",
+          "github": "lin-wei-lab",
+          "writing": "Writing"
+        }
+      },
+      "ui": {
+        "openPromptButton": "Open Prompt",
+        "copyOnlyButton": "Copy Prompt Only",
+        "copiedButton": "Copied",
+        "copyAndOpenLabel": "Copy and open",
+        "modelAriaLabel": "Open {{modelName}}",
+        "copiedOpening": "Prompt copied. Opening {{modelName}}.",
+        "copiedManualOpen": "Prompt copied. Click {{modelName}} again to open it.",
+        "copyBlockedOpen": "The browser blocked automatic copy. The prompt is selected. Press Command+C / Ctrl+C, then open {{modelName}}.",
+        "copiedPrompt": "Prompt copied. You can now paste it into the model you choose.",
+        "copyBlockedOnly": "The browser blocked automatic copy. The prompt is selected. Press Command+C / Ctrl+C."
+      },
+      "prompt": {
+        "assistantRole": "You are my private communication assistant.",
+        "contextIntro": "I am preparing to contact {{personName}}. Below is the personal context provided by {{personName}}.",
+        "intentLabel": "My contact intent:",
+        "generationIntro": "Based on this intent and the personal context below, help me generate:",
+        "tasks": [
+          "A natural first line that does not feel greasy or overdone",
+          "One sentence I can use to introduce myself",
+          "A clear but non-intrusive contact intent",
+          "Three tone options: casual, sincere, direct"
+        ],
+        "requirementsLabel": "Requirements:",
+        "requirements": [
+          "Do not pretend I already know {{personName}} well",
+          "Do not write corporate boilerplate",
+          "Do not exaggerate or sound overly enthusiastic",
+          "Do not invent experiences for me",
+          "If my intent is still unclear, ask me 2-3 follow-up questions first",
+          "The output should work for WeChat, email, or direct messages"
+        ],
+        "contextLabel": "{{personName}}'s personal context:"
+      },
+      "profileContext": "# Lin Wei / 林微\n\n## One-line positioning\nLin Wei writes about urban systems, public space, and real connection.\n\n## What she cares about\n- How urban systems land in actual everyday life.\n- How public spaces help strangers build real connection.\n- How AI can help people express collaboration intent more clearly.\n- Long-term relationships, community work, and conversations that accumulate.\n\n## Contact\n- Email: lin@example.com\n- GitHub: lin-wei-lab\n- Writing: notes on urban systems and public space.",
+      "purposes": {
+        "meet": {
+          "id": "meet",
+          "number": "01",
+          "label": "Get to know me",
+          "shortDescription": "Write a natural icebreaker.",
+          "purposeText": "Get to know me",
+          "addition": "This scenario is about a natural icebreaker. Make the opening feel like one real person trying to meet another real person, not a social template."
+        },
+        "thought": {
+          "id": "thought",
+          "number": "02",
+          "label": "Discuss an essay / idea",
+          "shortDescription": "Start a conversation around writing and thinking.",
+          "purposeText": "Discuss an essay / idea",
+          "addition": "This scenario is about continuing a conversation around an essay, an idea, or a piece of expression. First remind me to clarify: what I read, which point triggered me, and what I want to discuss next."
+        },
+        "create": {
+          "id": "create",
+          "number": "03",
+          "label": "Collaborate on something",
+          "shortDescription": "Collaboration, interview, project, opportunity.",
+          "purposeText": "Collaborate on something",
+          "addition": "This scenario is about collaboration, an interview, a project, or an opportunity. First help me clarify: what I want to do, what I can offer, and how I hope Lin responds."
+        }
+      }
+    }
+  }
+}

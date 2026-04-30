@@ -8,7 +8,7 @@ The page should not simply ask visitors to add a WeChat account or send a cold m
 
 The first version is a static, lightweight MVP. It proves one loop:
 
-1. A visitor understands who Tianyu is.
+1. A visitor understands who Alex Zhang is.
 2. The visitor chooses a contact purpose.
 3. The page shows a purpose-specific prompt.
 4. The visitor copies the prompt.
@@ -16,15 +16,15 @@ The first version is a static, lightweight MVP. It proves one loop:
 
 ## 2. Audience
 
-The page is for people who already have some reason to be curious about Tianyu but may not know how to start a conversation.
+The page is for people who already have some reason to be curious about Alex Zhang but may not know how to start a conversation.
 
 Primary visitor situations:
 
-- They want to know Tianyu as a person.
-- They have read something Tianyu wrote and want to discuss a thought or article.
+- They want to know Alex Zhang as a person.
+- They have read something Alex Zhang wrote and want to discuss a thought or article.
 - They want to explore a collaboration, interview, project, or opportunity.
 
-The page should make these visitors more intentional before they contact Tianyu.
+The page should make these visitors more intentional before they contact Alex Zhang.
 
 ## 3. Positioning
 
@@ -36,7 +36,7 @@ This means the page should not lead with a resume-like career pitch or a tool-li
 
 Working statement:
 
-> Tianyu is not a WeChat QR code. This page helps you understand why you want to talk, then gives your AI assistant enough context to help you write the first message.
+> Alex Zhang is not a WeChat QR code. This page helps you understand why you want to talk, then gives your AI assistant enough context to help you write the first message.
 
 The v0 homepage should use this stance directly: personal, direct, and not sales-like.
 
@@ -76,16 +76,16 @@ Content fields:
 
 v0 hero copy:
 
-- `田宇，不是一个微信二维码`
+- `张三，不是一个微信二维码`
 - `如果你想认识我、聊一个观点，或者一起做点事，可以先让你的 AI 助手帮你组织第一句话。`
 
-The hero must communicate that the page helps visitors contact Tianyu with clearer intention.
+The hero must communicate that the page helps visitors contact Alex Zhang with clearer intention.
 
 ### 4.3 Personal Context
 
 Purpose:
 
-- Give visitors enough context to decide whether and why to contact Tianyu.
+- Give visitors enough context to decide whether and why to contact Alex Zhang.
 - Feed the copied prompt with useful personal information.
 
 Required content fields:
@@ -153,7 +153,7 @@ Button label:
 
 Purpose:
 
-- Give visitors a way to contact Tianyu after they have formed a clearer opening.
+- Give visitors a way to contact Alex Zhang after they have formed a clearer opening.
 
 Content:
 
@@ -174,7 +174,7 @@ The site does not call an AI model in v0. It copies a prompt for the visitor to 
 All copied prompts must include:
 
 1. The visitor's selected purpose.
-2. Tianyu's personal context.
+2. Alex Zhang's personal context.
 3. Instructions for the AI assistant to write a first message.
 4. Constraints that prevent overly familiar, vague, or sales-like output.
 
@@ -191,7 +191,7 @@ All prompt variants should ask for:
 ```text
 你是我的私人沟通助手。
 
-我准备联系田宇。下面是田宇本人提供的个人上下文。
+我准备联系张三。下面是张三本人提供的个人上下文。
 
 我的联系目的：
 {{PURPOSE}}
@@ -205,14 +205,14 @@ All prompt variants should ask for:
 
 要求：
 
-- 不要假装我已经和田宇很熟
+- 不要假装我已经和张三很熟
 - 不要写商业套话
 - 不要过度夸张或过度热情
 - 不要替我编造经历
 - 如果我的目的还不清楚，先向我追问 2-3 个问题
 - 输出要适合发在微信、邮件或私信里
 
-田宇的个人上下文：
+张三的个人上下文：
 {{PROFILE_CONTEXT}}
 ```
 
@@ -233,7 +233,7 @@ All prompt variants should ask for:
 `一起做点事` should add:
 
 ```text
-这个场景偏向合作、访谈、项目或机会。请先帮助我说清楚：我想做什么、我能提供什么、我希望田宇怎么回应。
+这个场景偏向合作、访谈、项目或机会。请先帮助我说清楚：我想做什么、我能提供什么、我希望张三怎么回应。
 ```
 
 ## 6. Visual Direction
@@ -319,7 +319,7 @@ These are outside v0 and should only be reconsidered after the first static loop
 The MVP is successful when:
 
 1. Opening the page feels like a complete personal homepage, not a bare utility.
-2. A visitor can understand within 10 seconds that the page helps them contact Tianyu with clearer intention.
+2. A visitor can understand within 10 seconds that the page helps them contact Alex Zhang with clearer intention.
 3. The three purpose cards are visible and understandable.
 4. Selecting each card updates the prompt preview.
 5. The copy button copies the complete active prompt.

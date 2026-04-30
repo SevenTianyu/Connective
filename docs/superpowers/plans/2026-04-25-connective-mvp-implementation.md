@@ -53,7 +53,7 @@ test('exports exactly three purpose cards with meet as default', () => {
 });
 
 test('profile context contains the approved personal positioning', () => {
-  assert.match(connective.profileContext, /田宇/);
+  assert.match(connective.profileContext, /张三/);
   assert.match(connective.profileContext, /写作/);
   assert.match(connective.profileContext, /个人连接/);
   assert.match(connective.profileContext, /AI/);
@@ -63,8 +63,8 @@ test('buildPrompt includes selected purpose, profile context, and guardrails', (
   const prompt = connective.buildPrompt('thought');
 
   assert.match(prompt, /聊一篇文章 \/ 一个观点/);
-  assert.match(prompt, /田宇的个人上下文/);
-  assert.match(prompt, /不要假装我已经和田宇很熟/);
+  assert.match(prompt, /张三的个人上下文/);
+  assert.match(prompt, /不要假装我已经和张三很熟/);
   assert.match(prompt, /不要写商业套话/);
   assert.match(prompt, /我读到的内容是什么/);
   assert.doesNotMatch(prompt, /\{\{PURPOSE\}\}/);
@@ -94,10 +94,10 @@ Expected: FAIL because `../data.js` does not exist.
 Create `data.js`:
 
 ```js
-const profileContext = `# 田宇 / Tianyu
+const profileContext = `# 张三 / Alex Zhang
 
 ## 一句话定位
-田宇，一个把写作、AI 和真实连接放在一起思考的人。
+张三，一个把写作、AI 和真实连接放在一起思考的人。
 
 ## 我关心什么
 - 个人连接如何在 AI 时代变得更真诚，而不是更机械。
@@ -118,7 +118,7 @@ const profileContext = `# 田宇 / Tianyu
 
 ## 联系方式
 - 微信：请先用复制出来的 Prompt 写好第一句话，再通过你已有的渠道联系我。
-- GitHub：SevenTianyu
+- GitHub：alex-zhang-lab
 - 写作入口：公众号、博客或公开文章入口会作为主要阅读路径。`;
 
 const defaultPurposeId = 'meet';
@@ -146,7 +146,7 @@ const purposes = {
     label: '一起做点事',
     shortDescription: '合作、访谈、项目、机会。',
     purposeText: '一起做点事',
-    addition: '这个场景偏向合作、访谈、项目或机会。请先帮助我说清楚：我想做什么、我能提供什么、我希望田宇怎么回应。',
+    addition: '这个场景偏向合作、访谈、项目或机会。请先帮助我说清楚：我想做什么、我能提供什么、我希望张三怎么回应。',
   },
 };
 
@@ -159,7 +159,7 @@ function buildPrompt(purposeId) {
 
   return `你是我的私人沟通助手。
 
-我准备联系田宇。下面是田宇本人提供的个人上下文。
+我准备联系张三。下面是张三本人提供的个人上下文。
 
 我的联系目的：
 ${purpose.purposeText}
@@ -175,14 +175,14 @@ ${purpose.addition}
 
 要求：
 
-- 不要假装我已经和田宇很熟
+- 不要假装我已经和张三很熟
 - 不要写商业套话
 - 不要过度夸张或过度热情
 - 不要替我编造经历
 - 如果我的目的还不清楚，先向我追问 2-3 个问题
 - 输出要适合发在微信、邮件或私信里
 
-田宇的个人上下文：
+张三的个人上下文：
 ${profileContext}`;
 }
 
@@ -247,7 +247,7 @@ test('index.html contains the approved page structure', () => {
   const html = read('index.html');
 
   assert.match(html, /CONNECTIVE \/ PERSONAL CARD/);
-  assert.match(html, /田宇，不是一个微信二维码/);
+  assert.match(html, /张三，不是一个微信二维码/);
   assert.match(html, /data-purpose-list/);
   assert.match(html, /data-prompt-preview/);
   assert.match(html, /data-copy-button/);
@@ -287,8 +287,8 @@ Create `index.html`:
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Connective 是田宇的个人连接页，帮助访问者带着更清楚的目的开口。">
-    <title>Connective | Tianyu</title>
+    <meta name="description" content="Connective 是张三的个人连接页，帮助访问者带着更清楚的目的开口。">
+    <title>Connective | Alex Zhang</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -301,7 +301,7 @@ Create `index.html`:
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">PERSON / WRITING / THINKING</p>
-          <h1 id="hero-title">田宇，不是一个微信二维码</h1>
+          <h1 id="hero-title">张三，不是一个微信二维码</h1>
           <p class="hero-lede">如果你想认识我、聊一个观点，或者一起做点事，可以先让你的 AI 助手帮你组织第一句话。</p>
         </div>
 
@@ -349,7 +349,7 @@ Create `index.html`:
         <p>先复制 Prompt，让你的 AI 助手帮你整理第一句话。然后通过你已有的渠道联系我。</p>
         <div class="contact-links">
           <span>WeChat</span>
-          <a href="https://github.com/SevenTianyu">GitHub</a>
+          <a href="https://github.com/alex-zhang-lab">GitHub</a>
           <span>Writing</span>
         </div>
       </footer>
@@ -405,7 +405,7 @@ test('index.html contains the approved page structure', () => {
   const html = read('index.html');
 
   assert.match(html, /CONNECTIVE \/ PERSONAL CARD/);
-  assert.match(html, /田宇，不是一个微信二维码/);
+  assert.match(html, /张三，不是一个微信二维码/);
   assert.match(html, /data-purpose-list/);
   assert.match(html, /data-prompt-preview/);
   assert.match(html, /data-copy-button/);
@@ -811,7 +811,7 @@ test('index.html contains the approved page structure', () => {
   const html = read('index.html');
 
   assert.match(html, /CONNECTIVE \/ PERSONAL CARD/);
-  assert.match(html, /田宇，不是一个微信二维码/);
+  assert.match(html, /张三，不是一个微信二维码/);
   assert.match(html, /data-purpose-list/);
   assert.match(html, /data-prompt-preview/);
   assert.match(html, /data-copy-button/);
@@ -1023,7 +1023,7 @@ test('index.html contains the approved page structure', () => {
   const html = read('index.html');
 
   assert.match(html, /CONNECTIVE \/ PERSONAL CARD/);
-  assert.match(html, /田宇，不是一个微信二维码/);
+  assert.match(html, /张三，不是一个微信二维码/);
   assert.match(html, /data-purpose-list/);
   assert.match(html, /data-prompt-preview/);
   assert.match(html, /data-copy-button/);
@@ -1093,7 +1093,7 @@ Create `README.md`:
 
 Connective is a Pixel Paper personal homepage for purposeful first contact.
 
-It helps a visitor do one small thing before contacting Tianyu: choose why they want to talk, copy a purpose-specific prompt, and let their own AI assistant help write a clearer first message.
+It helps a visitor do one small thing before contacting Alex Zhang: choose why they want to talk, copy a purpose-specific prompt, and let their own AI assistant help write a clearer first message.
 
 ## MVP Loop
 
