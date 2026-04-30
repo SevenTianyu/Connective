@@ -6,7 +6,7 @@ function read(path) {
   return fs.readFileSync(path, 'utf8');
 }
 
-const publicFiles = ['index.html', 'data.js', 'app.js', 'README.md'];
+const publicFiles = ['index.html', 'data.js', 'app.js', 'README.md', 'README.zh-CN.md'];
 const forbiddenRealInfo = [
   ['田', '宇'].join(''),
   ['Tian', 'yu'].join(''),
@@ -79,6 +79,8 @@ test('referenced static assets exist', () => {
   assert.ok(fs.existsSync('profile.example.json'));
   assert.ok(fs.existsSync('scripts/configure-profile.mjs'));
   assert.ok(fs.existsSync('public/readme/homepage-preview.png'));
+  assert.ok(fs.existsSync('public/readme/homepage-preview-en.png'));
+  assert.ok(fs.existsSync('public/readme/homepage-preview-zh.png'));
   assert.ok(fs.existsSync('public/readme/prompt-bridge-pixel.svg'));
   assert.ok(fs.existsSync('.github/workflows/pages.yml'));
 });
@@ -250,10 +252,12 @@ test('app.js hardens missing runtime, fallback copy, and copied state', () => {
 
 test('README documents the static MVP workflow', () => {
   const readme = read('README.md');
+  const zhReadme = read('README.zh-CN.md');
 
   assert.match(readme, /Connective/);
-  assert.match(readme, /中文说明/);
-  assert.match(readme, /public\/readme\/homepage-preview\.png/);
+  assert.match(readme, /\[中文说明\]\(README\.zh-CN\.md\)/);
+  assert.match(readme, /^!\[Connective prompt bridge illustration\]\(public\/readme\/prompt-bridge-pixel\.svg\)/);
+  assert.match(readme, /public\/readme\/homepage-preview-en\.png/);
   assert.match(readme, /public\/readme\/prompt-bridge-pixel\.svg/);
   assert.match(readme, /profile\.example\.json/);
   assert.match(readme, /scripts\/configure-profile\.mjs/);
@@ -263,9 +267,27 @@ test('README documents the static MVP workflow', () => {
   assert.match(readme, /Vercel/);
   assert.match(readme, /Netlify/);
   assert.match(readme, /Cloudflare Pages/);
-  assert.match(readme, /Claude Code deployment prompt/);
-  assert.match(readme, /Codex deployment prompt/);
-  assert.match(readme, /三张目的卡片/);
+  assert.match(readme, /Claude Code Deployment Prompt/);
+  assert.match(readme, /Codex Deployment Prompt/);
+  assert.match(readme, /three intent cards/);
+  assert.doesNotMatch(readme, /public\/readme\/homepage-preview-zh\.png/);
+
+  assert.match(zhReadme, /Connective \/ 接点/);
+  assert.match(zhReadme, /\[English README\]\(README\.md\)/);
+  assert.match(zhReadme, /^!\[Connective Prompt 桥接宣传图\]\(public\/readme\/prompt-bridge-pixel\.svg\)/);
+  assert.match(zhReadme, /public\/readme\/homepage-preview-zh\.png/);
+  assert.match(zhReadme, /profile\.example\.json/);
+  assert.match(zhReadme, /scripts\/configure-profile\.mjs/);
+  assert.match(zhReadme, /python3 -m http\.server 4173/);
+  assert.match(zhReadme, /node --test tests\/\*\.test\.js/);
+  assert.match(zhReadme, /GitHub Pages/);
+  assert.match(zhReadme, /Vercel/);
+  assert.match(zhReadme, /Netlify/);
+  assert.match(zhReadme, /Cloudflare Pages/);
+  assert.match(zhReadme, /Claude Code 部署提示词/);
+  assert.match(zhReadme, /Codex 部署提示词/);
+  assert.match(zhReadme, /三张目的卡片/);
+  assert.doesNotMatch(zhReadme, /public\/readme\/homepage-preview-en\.png/);
 });
 
 test('profile customization files are documented and local profile is ignored', () => {
