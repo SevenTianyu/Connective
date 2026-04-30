@@ -130,7 +130,7 @@ Connective 是纯静态站点，不需要构建步骤。
 ```text
 你正在帮我部署一个定制版 Connective 个人主页。
 
-仓库：<在这里粘贴 Connective 仓库 URL>
+仓库：https://github.com/SevenTianyu/Connective
 
 请一步一步完成：
 1. 克隆仓库，检查 README.md、README.zh-CN.md、profile.example.json、data.js 和 scripts/configure-profile.mjs。
@@ -152,7 +152,7 @@ Connective 是纯静态站点，不需要构建步骤。
 ```text
 请实现一个定制版 Connective 部署。
 
-仓库：<在这里粘贴 Connective 仓库 URL>
+仓库：https://github.com/SevenTianyu/Connective
 
 你作为实现代理工作：
 1. 克隆仓库，检查当前静态应用，并阅读 README.md、README.zh-CN.md 和 profile.example.json。

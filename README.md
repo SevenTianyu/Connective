@@ -130,7 +130,7 @@ Copy this into Claude Code:
 ```text
 You are helping me deploy a customized Connective personal homepage.
 
-Repository: <paste the Connective repository URL here>
+Repository: https://github.com/SevenTianyu/Connective
 
 Please do the following step by step:
 1. Clone the repository and inspect README.md, README.zh-CN.md, profile.example.json, data.js, and scripts/configure-profile.mjs.
@@ -152,7 +152,7 @@ Copy this into Codex:
 ```text
 Implement a customized deployment of Connective.
 
-Repository: <paste the Connective repository URL here>
+Repository: https://github.com/SevenTianyu/Connective
 
 Work as an implementation agent:
 1. Clone the repo, inspect the current static app, and read README.md, README.zh-CN.md, and profile.example.json.

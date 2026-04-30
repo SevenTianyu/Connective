@@ -7,6 +7,7 @@ function read(path) {
 }
 
 const publicFiles = ['index.html', 'data.js', 'app.js', 'README.md', 'README.zh-CN.md'];
+const publicRepositoryUrl = 'https://github.com/SevenTianyu/Connective';
 const forbiddenRealInfo = [
   ['田', '宇'].join(''),
   ['Tian', 'yu'].join(''),
@@ -38,7 +39,10 @@ test('index.html contains the approved page structure', () => {
 });
 
 test('public source files use fictional profile information only', () => {
-  const publicSource = publicFiles.map((file) => read(file)).join('\n');
+  const publicSource = publicFiles
+    .map((file) => read(file))
+    .join('\n')
+    .replaceAll(publicRepositoryUrl, '');
 
   assert.match(publicSource, /张三/);
   assert.match(publicSource, /Alex Zhang/);
@@ -269,7 +273,9 @@ test('README documents the static MVP workflow', () => {
   assert.match(readme, /Cloudflare Pages/);
   assert.match(readme, /Claude Code Deployment Prompt/);
   assert.match(readme, /Codex Deployment Prompt/);
+  assert.match(readme, new RegExp(`Repository: ${publicRepositoryUrl.replaceAll('/', '\\/')}`));
   assert.match(readme, /three intent cards/);
+  assert.doesNotMatch(readme, /<paste the Connective repository URL here>/);
   assert.doesNotMatch(readme, /public\/readme\/homepage-preview-zh\.png/);
 
   assert.match(zhReadme, /Connective \/ 接点/);
@@ -286,7 +292,9 @@ test('README documents the static MVP workflow', () => {
   assert.match(zhReadme, /Cloudflare Pages/);
   assert.match(zhReadme, /Claude Code 部署提示词/);
   assert.match(zhReadme, /Codex 部署提示词/);
+  assert.match(zhReadme, new RegExp(`仓库：${publicRepositoryUrl.replaceAll('/', '\\/')}`));
   assert.match(zhReadme, /三张目的卡片/);
+  assert.doesNotMatch(zhReadme, /<在这里粘贴 Connective 仓库 URL>/);
   assert.doesNotMatch(zhReadme, /public\/readme\/homepage-preview-en\.png/);
 });
 
